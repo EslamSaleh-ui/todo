@@ -64,8 +64,8 @@ class passwordtextfield extends StatelessWidget {
         RegExp S=new RegExp(v);
         if(i!.isEmpty)
           return 'this field is needed';
-        else if(!S.hasMatch(i) )
-          return   "Password must contains at least 8 chars between numbers,digits and chars";
+        // else if(!S.hasMatch(i) )
+        //   return   "Password must contains at least 8 chars between numbers,digits and chars";
         return null;
       },
     ))

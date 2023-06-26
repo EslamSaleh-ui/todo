@@ -118,7 +118,8 @@ import 'package:todo/utils/widgets/timepicker.dart';
           actionsIconTheme: IconThemeData(opacity: 1),
           title: Text('TODO',
           style: TextStyle(fontSize: 20,fontWeight: FontWeight.normal,color:Colors.black)),centerTitle: true,
-      actions: [IconButton(onPressed: (){name.clear();filter();}, icon: Icon(Icons.filter_list)),
+      actions: [IconButton(onPressed: (){filter_.value=false;setState(() {});}, icon: Icon(Icons.refresh)),
+        IconButton(onPressed: (){name.clear();filter();}, icon: Icon(Icons.filter_list)),
         IconButton(onPressed: (){tokken.val='';
       Get.offAll(()=>MyHomePage(),  transition: Transition.leftToRight);
         }, icon: Icon(Icons.logout))]),
