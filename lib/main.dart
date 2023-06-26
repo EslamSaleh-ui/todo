@@ -82,14 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
               },
                 labelText: 'Enter Your Password', keyboardType:  TextInputType.visiblePassword)  ,divider(30),
            Center(child:  GradientButton(text: 'Login', pressed: ()async {
-             // if(_key.currentState!.validate()){
-             String res= await login(email:'flutter-task@test.com',pw:'12345678' );
+             if(_key.currentState!.validate()){
+             String res= await login(email:email.text,pw:pw.text );
              if(res=='true')
              Get.offAll(()=>HomePage(),  transition: Transition.leftToRight);
              else
                toast(res);
           print(res);
-             // }
+             }
           }, hasRadius: true,height: 50,width: MediaQuery.of(context).size.width-100))
               ])  )
             )],
@@ -98,3 +98,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+//'flutter-task@test.com'
